@@ -34,7 +34,7 @@ export function LandingPage({ locale, onNavigate }: LandingPageProps) {
             {/* Left: 8 cols */}
             <div className="lg:col-span-8 lg:border-r border-ink lg:pr-12">
               <SectionLabel className="mb-4 block">Breaking Development</SectionLabel>
-              <h1 className="font-serif text-4xl sm:text-5xl lg:text-7xl xl:text-8xl font-black leading-[0.9] tracking-tighter text-ink mb-4">
+              <h1 className="font-serif text-2xl sm:text-3xl lg:text-5xl xl:text-6xl font-black leading-[0.9] tracking-tighter text-ink mb-4 whitespace-nowrap overflow-x-auto">
                 {t.hero.headline}
               </h1>
               {/* Byline */}
@@ -45,7 +45,7 @@ export function LandingPage({ locale, onNavigate }: LandingPageProps) {
                 <span>•</span>
                 <span>5 {locale === "en" ? "min read" : "menit baca"}</span>
               </div>
-              <div className="drop-cap font-body text-base sm:text-lg leading-relaxed text-neutral-700 mb-8">
+              <div className="font-body text-sm sm:text-base leading-relaxed text-neutral-700 mb-8 whitespace-nowrap overflow-x-auto">
                 {t.hero.subheadline}
               </div>
               <div className="flex flex-col sm:flex-row gap-4">
@@ -467,7 +467,7 @@ alwaysApply: true
           <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl font-black mb-6 whitespace-nowrap overflow-x-auto">
             {brand.tagline}
           </h2>
-          <p className="font-body text-neutral-400 text-lg max-w-2xl mx-auto mb-8">
+          <p className="font-body text-neutral-400 text-base sm:text-lg mb-8 whitespace-nowrap overflow-x-auto">
             {locale === "en"
               ? "Stop guessing. Start building with a plan that's ready for your AI coding tool."
               : "Berhenti menebak. Mulai membangun dengan rencana yang siap untuk tool coding AI Anda."}
