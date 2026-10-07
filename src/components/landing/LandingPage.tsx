@@ -60,7 +60,7 @@ export function LandingPage({ locale, onNavigate }: LandingPageProps) {
 
             {/* Right: 4 cols — animated demo */}
             <div className="lg:col-span-4 lg:pl-8 mt-8 lg:mt-0">
-              <div className="border-2 border-ink p-4 bg-paper hard-shadow-hover">
+              <div className="border-2 border-ink p-4 bg-paper hard-shadow-hover overflow-hidden">
                 <div className="flex items-center gap-2 mb-3 border-b border-muted pb-2">
                   <Badge badgeVariant="breaking">LIVE</Badge>
                   <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">Demo</span>
