@@ -464,7 +464,7 @@ alwaysApply: true
       <section className="bg-ink text-paper">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 py-20 text-center">
           <SectionLabel className="mb-4 block text-neutral-400">Ready?</SectionLabel>
-          <h2 className="font-serif text-3xl sm:text-4xl lg:text-6xl font-black mb-6">
+          <h2 className="font-serif text-2xl sm:text-3xl lg:text-5xl font-black mb-6 whitespace-nowrap overflow-x-auto">
             {brand.tagline}
           </h2>
           <p className="font-body text-neutral-400 text-lg max-w-2xl mx-auto mb-8">
