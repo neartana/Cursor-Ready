@@ -53,19 +53,25 @@ export function Footer({ locale }: FooterProps) {
 
         <Rule variant="heavy" />
 
-        {/* Bottom section */}
-        <div className="flex flex-col sm:flex-row items-start sm:items-center justify-between gap-4 mt-6">
-          <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
-            {t.edition}: {brand.edition.volume}.{brand.edition.version} | {t.printed}
-          </div>
-          <div className="font-mono text-[10px] uppercase tracking-widest text-neutral-500">
+        {/* Bottom section — all on one horizontal line */}
+        <div className="flex flex-wrap items-center justify-between gap-x-6 gap-y-2 mt-6">
+          <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 whitespace-nowrap">
+            {t.edition}: {brand.edition.volume}.{brand.edition.version}
+          </span>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 whitespace-nowrap">
+            {t.printed}
+          </span>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 whitespace-nowrap">
+            {brand.domain}
+          </span>
+          <span className="font-mono text-[10px] uppercase tracking-widest text-neutral-500 whitespace-nowrap">
             © {new Date().getFullYear()} {brand.name}
-          </div>
+          </span>
         </div>
 
-        {/* Disclaimer */}
-        <div className="mt-6 pt-4 border-t border-muted">
-          <p className="font-mono text-[9px] uppercase tracking-wider text-neutral-400 text-center">
+        {/* Disclaimer — horizontal, single line */}
+        <div className="mt-4 pt-4 border-t border-muted">
+          <p className="font-mono text-[9px] uppercase tracking-wider text-neutral-400 text-center whitespace-nowrap overflow-x-auto">
             {brand.disclaimer}
           </p>
         </div>

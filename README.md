@@ -93,47 +93,23 @@ No hardcoded brand strings in components.
 
 English and Bahasa Indonesia support in `src/lib/i18n.ts`. User-selectable per session.
 
-## Cursor Pack Format
+## Export Format
 
-The exported ZIP contains:
+The export produces a single **project-plan.md** file containing:
 
-```
-cursor-pack/
-├── PRD.md                    # Product requirements
-├── schema.sql                # Database schema
-├── openapi.yaml              # API specification
-├── TASKS.md                  # Phased task breakdown
-├── AGENTS.md                 # Cross-tool instructions
-├── CLAUDE.md                 # Claude Code config
-├── .cursor/
-│   └── rules/
-│       ├── project-overview.mdc   # Always-apply rules
-│       ├── tech-stack.mdc         # Stack conventions
-│       ├── database-rules.mdc     # DB/API rules
-│       └── task-workflow.mdc      # Dev process rules
-└── prompts/
-    ├── kickoff.md            # Initial prompt
-    ├── phase-1-setup.md      # Foundation tasks
-    ├── phase-2-features.md   # Core features
-    ├── phase-3-polish.md     # Polish & i18n
-    └── phase-4-launch.md     # Deploy
-```
+1. **Header** — project name, generation date
+2. **Table of Contents** — links to each section
+3. **Idea Clarifier** — project brief
+4. **PRD** — product requirements document
+5. **Features** — MoSCoW-prioritized feature list
+6. **Architecture** — system design
+7. **Database Schema** — tables and SQL
+8. **API Spec** — endpoint documentation
+9. **Task Breakdown** — phased tasks with estimates
+10. **Cursor Rules** — inline rules block ready to paste into `.cursor/rules/project.mdc`
+11. **Kickoff Prompt** — ready-to-paste prompt for Cursor (or any AI coding tool)
 
-### .cursor/rules Format
-
-Rules follow Cursor's current MDC (Markdown with frontmatter) format:
-
-```markdown
----
-description: What this rule covers
-globs: **/*.tsx
-alwaysApply: false
----
-
-# Rule Title
-
-Rule content in markdown...
-```
+The entire plan lives in one `.md` file — easy to share, version, and drop into any AI coding assistant.
 
 ## Model Configuration
 

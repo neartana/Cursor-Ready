@@ -565,7 +565,7 @@ export function Workspace({ locale }: WorkspaceProps) {
           <div className="flex items-center gap-2">
             <Button variant="ghost" size="sm" onClick={handleExport}>
               <Download size={14} className="mr-1" />
-              {t.cursorPack}
+              {locale === "en" ? "Export .md" : "Ekspor .md"}
             </Button>
           </div>
         </div>
@@ -781,17 +781,17 @@ export function Workspace({ locale }: WorkspaceProps) {
                   {t.regenerate}
                 </Button>
               )}
+              {stepStatus[currentStep] === "done" && currentStep >= 1 && (
+                <Button variant="accent" onClick={handleExport}>
+                  <Download size={14} className="mr-1" />
+                  {t.cursorPack}
+                </Button>
+              )}
               {currentStep === 7 && stepStatus[7] === "done" && (
-                <>
-                  <Button variant="accent" onClick={handleExport}>
-                    <Download size={14} className="mr-1" />
-                    {t.cursorPack}
-                  </Button>
-                  <Button variant="secondary" onClick={handleCopyPrompt}>
-                    <Copy size={14} className="mr-1" />
-                    {t.copyPrompt}
-                  </Button>
-                </>
+                <Button variant="secondary" onClick={handleCopyPrompt}>
+                  <Copy size={14} className="mr-1" />
+                  {t.copyPrompt}
+                </Button>
               )}
               {currentStep > 0 && (
                 <Button variant="ghost" onClick={() => setCurrentStep(currentStep - 1)}>
