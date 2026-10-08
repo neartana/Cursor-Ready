@@ -19,7 +19,7 @@ Cursor Ready is a SaaS web application that guides solo founders, students, and 
 6. **Task Breakdown** — Phased tasks sized for single AI sessions
 7. **Coding Prompt** — Kickoff prompt + phased prompts + Cursor Pack
 
-Every step streams output, supports editing, versioning, and regeneration. The final export is a **Cursor Pack** ZIP ready to drop into your IDE.
+Every step streams output, supports editing, versioning, and regeneration. The final export is a **Cursor Pack** md ready to drop into your IDE.
 
 ## Tech Stack
 
